@@ -24,6 +24,12 @@ class Document
     @content = content
   end
 
+  def title new_title
+    unless @read_only
+      @title = new_title
+    end
+  end
+
   def words
     @content.split
   end

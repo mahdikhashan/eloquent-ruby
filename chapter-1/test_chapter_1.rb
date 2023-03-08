@@ -10,8 +10,12 @@ class DocumentTest < Minitest::Test
     )
   end
 
-  def test_attribute
-    assert_equal 'my-title', @doc.title
+  def test_content_attribute
+    assert_equal 'Content of the book.', @doc.content
+  end
+
+  def test_title_attribute
+    assert_equal 'new-title', @doc.title( 'new-title' )
   end
 
   def test_author_in_attr
