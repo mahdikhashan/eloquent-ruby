@@ -2,7 +2,6 @@ require_relative "chapter-1.rb"
 require "minitest/autorun"
 
 class DocumentTest < Minitest::Test
-
   def setup
     @doc = Document.new( 
       'my-title', 
@@ -30,7 +29,7 @@ class DocumentTest < Minitest::Test
   def test_count_words_in
     assert_equal 2, @doc.count_words_in( 'My Content' )
   end
-  
+
   def test_that_will_be_skipped
     skip 'test it later.'
   end
