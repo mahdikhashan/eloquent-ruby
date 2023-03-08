@@ -34,6 +34,10 @@ class DocumentTest < Minitest::Test
     assert_equal 2, @doc.count_words_in( 'My Content' )
   end
 
+  def test_faulty_method
+    assert_raises(DocumentException) {@doc.faulty_method}
+  end
+
   def test_that_will_be_skipped
     skip 'test it later.'
   end

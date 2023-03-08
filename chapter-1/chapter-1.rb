@@ -35,11 +35,7 @@ class Document
   end
 
   def faulty_method
-    begin
-      raise DocumentException.new "error"
-    rescue DocumentException => e
-      puts e
-    end
+    raise DocumentException.new "error"
   end
 
   def word_count
